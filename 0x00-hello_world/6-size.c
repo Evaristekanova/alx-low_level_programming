@@ -8,10 +8,14 @@ int main(void)
 {
 	char m;
 	int  n;
-	float x;
+	long int x;
+	long long int z;
+	float f;
 
-	printf("The size of char is equal to %lu\n", (unsigned long) sizeof(char));
-	printf("The size of int is equal to %lu\n", (unsigned long) sizeof(int));
-	printf("The size of float is equal to %lu\n", (unsigned long) sizeof(float));
+	printf("Size of a char:%lubyte(s)\n", (unsigned long) sizeof(char));
+	printf("Size of an int:%lubyte(s)\n", (unsigned long) sizeof(int));
+	printf("Size of a long int:%lubyte(s)\n", (unsigned long) sizeof(int));
+	printf("Size of a long long int:%lubyte(s)\n", (unsigned long) sizeof(int));
+	printf("Size of a float:%lubyte(s)\n", (unsigned long) sizeof(float));
 	return (0);
 }
