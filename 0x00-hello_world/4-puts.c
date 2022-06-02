@@ -1,6 +1,5 @@
-#!/bin/bash
 #include <stdio.h>
 int main (void){
-	puts ("Programming is like building a multiligual puzzle\n");	
-		return 0;
+	puts("Programming is like building multilingual pussle\n");
+	return 0;
 }
