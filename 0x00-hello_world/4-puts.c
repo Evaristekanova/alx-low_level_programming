@@ -1,10 +1,11 @@
-/**
- *outpitting using puts function
+#include <stdio.h>
+/*
+ * mani-description
+ *
+ * Return:0 if success
  */
-#include<stdio.h>
-int main(void)
+int main (void)
 {
-	puts("Programming is like building a miltilingual puzzle\n");
-		return(0);
+	puts("Programming is like building a multilingual puzzle\n");
+	return (0);
 }
-	 
