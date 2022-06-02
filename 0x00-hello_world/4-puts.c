@@ -1,11 +1,11 @@
 #include <stdio.h>
-/*
- * mani-description
- *
- * Return:0 if success
+/* main function prints some strings*/
+/**
+ * main - print where we begin
+ * Return:  return zero to declare sucess
  */
-int main (void)
+int main(void)
 {
-	puts("Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
