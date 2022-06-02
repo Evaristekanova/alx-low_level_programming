@@ -1,5 +1,10 @@
-#include <stdio.h>
-int main (void){
-	puts("Programming is like building multilingual pussle\n");
-	return 0;
+/**
+ *outpitting using puts function
+ */
+#include<stdio.h>
+int main(void)
+{
+	puts("Programming is like building a miltilingual puzzle\n");
+		return(0);
 }
+	 
