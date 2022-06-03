@@ -6,21 +6,23 @@
  */
 int main(void)
 {
-	int n = 0;
+	int n = 98;
 
 	printf("Enter any number you want:\n");
 
 		if (n > 0)
 		{
-			printf("%d is great than 0\n", n);
+			printf("%d is positive\n", n);
 		}
+		n = -98;
 		else if (n < 0)
 		{
-			printf("%d is less than 0\n", n);
+			printf("%d is negative\n", n);
 		}
+		n = 0;
 		else
 		{
-			printf("%d is equal to zero\n", n);
+			printf("%d is zero\n", n);
 		}
 		return (0);
 }
