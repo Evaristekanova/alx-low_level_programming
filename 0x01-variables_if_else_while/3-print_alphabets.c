@@ -12,12 +12,12 @@ int main(void)
 	{
 		putchar(chara);
 	}
-	putchar('\n');
 
 	for (chara = 'A'; chara <= 'Z'; chara++)
 	{
 		putchar(chara);
 	}
+	putchar('\n');
 
 	return (0);
 }
