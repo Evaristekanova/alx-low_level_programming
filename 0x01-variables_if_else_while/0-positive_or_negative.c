@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 /**
  * main-chacking if number is positive or not
  *
@@ -6,7 +8,10 @@
  */
 int main(void)
 {
-	int n = 98;
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
 		if (n > 0)
 		{
