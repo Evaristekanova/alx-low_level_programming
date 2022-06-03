@@ -1,11 +1,12 @@
 #include <stdio.h>
-/* main function prints some strings*/
+#include <unistd.h>
 /**
- * main - print where we begin
- * Return: 1 if success sucess
+ * main - prints exactly "and that piece of art is useful"
+ * - Dora Korpar, 2015-10-19",
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	putchar("and that piece of art is useful"\" - Dora Korpar, 2015-10-19");
-	return (0);
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
 }
