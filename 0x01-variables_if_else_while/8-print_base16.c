@@ -17,7 +17,7 @@ int main(void)
 				putchar(num);
 			}
 		}
-		putchar(num);
+		putchar((num % 10) + '0');
 	}
 	return (0);
 }
