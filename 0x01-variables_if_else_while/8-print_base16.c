@@ -16,6 +16,7 @@ int main(void)
 			{
 				putchar(num);
 			}
+			break;
 		}
 		putchar((num % 10) + '0');
 	}
