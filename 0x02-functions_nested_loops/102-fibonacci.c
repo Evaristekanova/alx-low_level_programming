@@ -7,24 +7,24 @@
 int main(void)
 {
 	int i;
-	int j, k, z;
+	long int j, k, z;
 
 	j = 1;
 	k = 2;
-	printf("%d, %d", j, k);
+	printf("l%d, l%d", j, k);
 	for (i = 0; i <= 50; i++)
 	{
 		z = j + k;
 		if (i != 50)
 		{
-			printf("%d,", z);
+			printf("l%d,", z);
 			printf(" ");
 			j = k;
 			k = z;
 		}
 		else
 		{
-			printf("%d", z);
+			printf("l%d", z);
 		}
 	}
 	return (0);
