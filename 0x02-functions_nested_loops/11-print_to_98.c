@@ -8,9 +8,9 @@
 void print_to_98(int n)
 {
 	int m;
-	m = n;
 
-	for (m =n; m < 98; m++)
+	m = n;
+	for (m = n; m < 98; m++)
 	{
 		_putchar(n);
 		_putchar(',');
@@ -22,6 +22,5 @@ void print_to_98(int n)
 		_putchar(n);
 		_putchar(',');
 		_putchar(' ');
-		
 	}
 }
