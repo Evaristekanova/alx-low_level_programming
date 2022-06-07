@@ -27,6 +27,7 @@ int main(void)
 			printf("%ld", z);
 		}
 	}
+	printf("\n");
 	return (0);
 }
 
