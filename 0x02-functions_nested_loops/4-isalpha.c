@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
-*_islower- checks if char us lower case
+*_isalpha- checks if char us lower case
 *@c: integer c to check
 * Return: int
 */
 
-int _islower(int c)
+int _isalpha(int c)
 {
-	if (c >= 97 && c <= 122)
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 	{
 		return (1);
 	}
