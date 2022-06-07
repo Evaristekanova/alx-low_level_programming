@@ -3,12 +3,13 @@
 /**
  * _abs-printing absolute value of any number
  *
- * @:parameter for the function
+ * @n:parameter for the function
  * Return:0 if succcess
  */
 int _abs(int n)
 {
 	int m;
+
 	m = abs(n);
 	return (m);
 }
