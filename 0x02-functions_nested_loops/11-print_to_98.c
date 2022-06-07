@@ -7,19 +7,21 @@
  */
 void print_to_98(int n)
 {
+	int m;
+	m = n;
 
-	for (;n < 98; n++)
+	for (m =n; m < 98; m++)
 	{
 		_putchar(n);
 		_putchar(',');
 		_putchar(' ');
 	}
 
-	if (n > 98)
+	for (m = n; m > 98; m--)
 	{
 		_putchar(n);
 		_putchar(',');
 		_putchar(' ');
-		n--;
+		
 	}
 }
