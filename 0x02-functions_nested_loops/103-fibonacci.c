@@ -15,11 +15,11 @@ int main(void)
 	sum = 0;
 	for (i = 1; i <= 33; ++i)
 	{
+		z = j + k;
 		if (z < 4000000 && (z % 2) == 0)
 		{
 			sum = sum + z;
 		}
-		z = j + k;
 		j = k;
 		k = z;
 	}
