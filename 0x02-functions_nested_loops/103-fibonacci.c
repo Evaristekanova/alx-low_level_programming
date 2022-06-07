@@ -8,14 +8,14 @@
 int main(void)
 {
 	int i;
-	long unsigned int sum, j, k, z;
+	unsigned long int sum, j, k, z;
 
 	j = 1;
 	k = 2;
 	sum = 0;
 	for (i = 1; i <= 33; ++i)
 	{
-		if (j < 4000000 && (j % 2) == 0)
+		if (z < 4000000 && (z % 2) == 0)
 		{
 			sum = sum + j;
 		}
