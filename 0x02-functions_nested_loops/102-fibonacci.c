@@ -12,10 +12,10 @@ int main(void)
 	j = 1;
 	k = 2;
 	printf("%ld, %ld, ", j, k);
-	for (i = 0; i <= 49; i++)
+	for (i = 0; i <= 47; i++)
 	{
 		z = j + k;
-		if (i != 49)
+		if (i != 47)
 		{
 			printf("%ld,", z);
 			printf(" ");
