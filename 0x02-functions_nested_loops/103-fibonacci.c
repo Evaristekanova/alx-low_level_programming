@@ -16,9 +16,9 @@ int main(void)
 	for (i = 1; i <= 33; ++i)
 	{
 		z = j + k;
-		if (z < 4000000 && (z % 2) == 0)
+		if (j < 4000000 && (j % 2) == 0)
 		{
-			sum = sum + z;
+			sum = sum + j;
 		}
 		j = k;
 		k = z;
