@@ -7,24 +7,24 @@
 int main(void)
 {
 	int i;
-	long int j, k, z;
+	unsigned long int j, k, z;
 
 	j = 1;
 	k = 2;
-	printf("%ld, %ld, ", j, k);
-	for (i = 0; i <= 98; i++)
+	printf("%lu, %lu, ", j, k);
+	for (i = 0; i <= 95; i++)
 	{
 		z = j + k;
-		if (i != 98)
+		if (i != 95)
 		{
-			printf("%ld,", z);
+			printf("%lu,", z);
 			printf(" ");
 			j = k;
 			k = z;
 		}
 		else
 		{
-			printf("%ld", z);
+			printf("%lu", z);
 		}
 	}
 	printf("\n");
