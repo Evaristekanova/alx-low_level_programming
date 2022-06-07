@@ -17,7 +17,7 @@ int main(void)
 	{
 		if (z < 4000000 && (z % 2) == 0)
 		{
-			sum = sum + j;
+			sum = sum + z;
 		}
 		z = j + k;
 		j = k;
