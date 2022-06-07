@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_to_98-print nutural number within given range
  *
@@ -7,20 +8,28 @@
  */
 void print_to_98(int n)
 {
-	int m;
+	int i;
+	int j;
 
-	m = n;
-	for (m = n; m < 98; m++)
+	for (i = n; i <= 98; i++)
 	{
-		_putchar(n);
-		_putchar(',');
-		_putchar(' ');
+		printf("%d,", i);
+		printf(" ");
+
+		if (i == 98)
+		{
+			printf("%d", i);
+		}
 	}
 
-	for (m = n; m > 98; m--)
+	for (j = n; j >= 98; j--)
 	{
-		_putchar(n);
-		_putchar(',');
-		_putchar(' ');
+		printf("%d,", j);
+		printf(" ");
+
+		if (j == 98)
+		{
+			printf("%d", j);
+		}
 	}
 }
