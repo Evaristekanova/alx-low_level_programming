@@ -6,6 +6,7 @@
  * @c:parameter for the user defined function
  *Return:0 if success
  */
+int _putchar();
  int _isupper(int c);
  int _isdigit(int c);
  int mul(int a, int b);
