@@ -2,7 +2,7 @@
 /**
  * _puts - printing a string
  *
- * @s: month in number format
+ * @str:array as parameter
  *
  * Return:void
  */
@@ -12,7 +12,7 @@ void _puts(char *str)
 
 	for (i = 0; i >= 0; i++)
 	{
-		if (*(str + i) == '\0');
+		if (*(str + i) == '\0')
 		{
 			break;
 		}
