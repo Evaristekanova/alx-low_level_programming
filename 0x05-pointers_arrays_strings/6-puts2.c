@@ -1,0 +1,22 @@
+#include "main.h"
+/**
+ * puts2 - printing every single character of a  string followed by new line
+ *
+ * @str:array as parameter
+ *
+ * Return:void
+ */
+void puts2(char *str)
+{
+	int i;
+
+	for (i = 0; i >= 0; i++)
+	{
+		if (*(str + i) == '\0')
+		{
+			break;
+		}
+		_putchar(*(str + i));
+		_putchar('\n');
+	}
+}
