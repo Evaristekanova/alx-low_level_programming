@@ -15,9 +15,10 @@ int _strlen(char *s)
 	for (i = 0; i >= 0; i++)
 	{
 		if (s[i] == '\0')
+		{
 			break;
-		else
-			counter++;
+		}
+		counter++;
 	}
 	return (counter);
 }
