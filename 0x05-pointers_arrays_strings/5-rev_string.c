@@ -20,6 +20,8 @@ void rev_string(char *s)
 	len--;
 	for (pos = 0; pos < len - pos ; pos++)
 	{
+		if (s[pos] == '\0')
+			break;
 		b = s[pos];
 		s[pos] = s[len - pos];
 		s[len - pos] = b;
