@@ -1,23 +1,28 @@
 #include "main.h"
+
 /**
- *  rev_string - printing a string
- *
- * @s:array as parameter
- *
- * Return:void
+ * rev_string - reverse a string
+ * @s: arg1
+ * Return: void
  */
+
 void rev_string(char *s)
 {
-	int i;
-	int counter;
+	int i, pos, len = 0;
+	char b;
 
-	counter = 0;
-	for (i = 0; i >= 0; i--)
+	for (i = 0; i >= 0; i++)
 	{
 		if (s[i] == '\0')
-		{
 			break;
-		}
-		counter++;
+		len++;
 	}
+	len--;
+	for (pos = 0; pos < len - pos ; pos++)
+	{
+		b = s[pos];
+		s[pos] = s[len - pos];
+		s[len - pos] = b;
+	}
+	_putchar('\n');
 }
