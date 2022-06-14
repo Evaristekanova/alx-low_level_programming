@@ -1,34 +1,25 @@
 #include "main.h"
 /**
- * puts_half - printingthe last half elements of array
- *
- *  @str: array arg
- *
- *  Return:void
+ * puts_half - print half of string
+ * @str: arg1
+ * Return: void
  */
 void puts_half(char *str)
 {
-	int i;
-	int n;
-	long int lenght = 0;
+	int i, n, count = 0;
 
 	for (i = 0; i >= 0; i++)
 	{
 		if (str[i] == '\0')
-		{
 			break;
-		}
-		lenght++;
+		count++;
 	}
-	if (lenght % 2 != 0)
-	{
-		n = (lenght - 1) / 2;
-	}
+	if (count % 2 != 0)
+		n = (count - 1) / 2;
 	else
-	{
-		n = lenght / 2;
-	}
-	for (i = n; i <= lenght - 1; i++)
+		n = count / 2;
+
+	for (i = n ; i <= count - 1; i++)
 	{
 		_putchar(str[i]);
 	}
