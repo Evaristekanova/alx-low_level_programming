@@ -5,19 +5,23 @@
  * @s: arg1
  * Return: void
  */
+
 void rev_string(char *s)
 {
-	int len = 0;
+	int i, pos, len = 0;
+	char b;
 
-	while (s[len] != '\0')
+	for (i = 0; i >= 0; i++)
 	{
+		if (s[i] == '\0')
+			break;
 		len++;
 	}
-	while (len >= 0)
+	len--;
+	for (pos = 0; pos < len - pos ; pos++)
 	{
-		if (s[len] == '\0')
-			break;
-		_putchar(s[len]);
-		len--;
+		b = s[pos];
+		s[pos] = s[len - pos];
+		s[len - pos] = b;
 	}
 }
