@@ -30,6 +30,10 @@ void puts_half(char *str)
 	}
 	for (i = n; i <= lenght; i++)
 	{
+		if (str[i] == '\0')
+		{
+			break;
+		}
 		_putchar(str[i]);
 	}
 	_putchar('\n');
