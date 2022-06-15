@@ -1,4 +1,5 @@
-#ifndef MAIN_H
+#ifndef MATH_H
+#define MATH_H
 /**
  * main.h - header file
  *
@@ -13,4 +14,4 @@ char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
 int _putchar();
-#endif MAIN_H
+#endif /*MAIN_H*/
