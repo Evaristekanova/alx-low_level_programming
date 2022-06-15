@@ -20,13 +20,13 @@ void reverse_array(int *a, int n)
 	{
 		if (count != 0)
 		{
-			_putchar(a[count]);
+			_putchar(a[count] = '0');
 			_putchar(',');
 			_putchar(' ');
 		}
 		else
 		{
-			_putchar(a[count]);
+			_putchar(a[count] + '0');
 		}
 	}
 }
