@@ -8,15 +8,15 @@
 char *leet(char *s)
 {
 	int i = 0, j;
-	char subs[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'},
-	     str[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char replace[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+	char string[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if (s[i] == str[j])
-				s[i] = subs[j];
+			if (s[i] == string[j])
+				s[i] = replace[j];
 		}
 
 	}
