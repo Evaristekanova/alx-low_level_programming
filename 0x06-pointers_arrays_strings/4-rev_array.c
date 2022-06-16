@@ -18,15 +18,15 @@ void reverse_array(int *a, int n)
 	}
 	for (count = n - 1; count >= 0; count--)
 	{
-		if (count != 0)
+		if (a[count] % 10 != 0)
 		{
-			_putchar(a[count] + '0');
-			_putchar(',');
-			_putchar(' ');
+			_putchar(a[count] / 10 + '0');
 		}
 		else
 		{
-			_putchar(a[count] + '0');
+			_putchar(a[count] / 10 + '0');
+			_putchar(',');
+			_putchar(' ');
 		}
 	}
 }
