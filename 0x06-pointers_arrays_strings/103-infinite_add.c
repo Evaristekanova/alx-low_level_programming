@@ -1,78 +1,50 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * isPrintableASCII - determines if n is a printable ASCII char
- * @n: integer
- * Return: 1 if true, 0 if false
+ * infinite_add -  adds two numbers
+ * @n1: first number
+ * @n2: second number
+ * @r: result
+ * @size_r: result lenght
+ * Return: sum
  */
-int isPrintableASCII(int n)
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	return (n >= 32 && n <= 126);
-}
+	int i = 0, j = 0, k, l = 0, f, s, d = 0;
 
-/**
- * printHexes - print hex values for string b in formatted form
- * @b: string to print
- * @start: starting position
- * @end: ending position
- */
-void printHexes(char *b, int start, int end)
-{
-	int i = 0;
-
-	while (i < 10)
+	while (n1[i] != '\0')
+		i++;
+	while (n2[j] != '\0')
+		j++;
+	if (i > j)
+		l = i;
+	else
+		l = j;
+	if (l + 1 > size_r)
+		return (0);
+	r[l] = '\0';
+	for (k = l - 1 ; k >= 0 ; k--)
 	{
-		if (i < end)
-			printf("%02x", *(b + start + i));
+		i--;
+		j--;
+		if (i >= 0)
+			f = n1[i] - '0';
 		else
-			printf("  ");
-		if (i % 2)
-			printf(" ");
-		i++;
+			f = 0;
+		if (j >= 0)
+			s = n2[j] - '0';
+		else
+			s = 0;
+		r[k] = (f + s + d) % 10 + '0';
+		d = (f + s + d) / 10;
 	}
-}
-
-/**
- * printASCII - print ascii values for string b,
- * formatted to replace nonprintable chars with '.'
- * @b: string to print
- * @start: starting position
- * @end: ending position
- */
-void printASCII(char *b, int start, int end)
-{
-	int ch, i = 0;
-
-	while (i < end)
+	if (d == 1)
 	{
-		ch = *(b + i + start);
-		if (!isPrintableASCII(ch))
-			ch = 46;
-		printf("%c", ch);
-		i++;
+		r[l + 1] = '\0';
+		if (l + 2 > size_r)
+			return (0);
+		while (l-- >= 0)
+			r[l + 1] = r[l];
+		r[0] = d + '0';
 	}
-}
-
-/**
- * print_buffer - prints a buffer
- * @b: string
- * @size: size of buffer
- */
-void print_buffer(char *b, int size)
-{
-	int start, end;
-
-	if (size > 0)
-	{
-		for (start = 0; start < size; start += 10)
-		{
-			end = (size - start < 10) ? size - start : 10;
-			printf("%08x: ", start);
-			printHexes(b, start, end);
-			printASCII(b, start, end);
-			printf("\n");
-		}
-	} else
-		printf("\n");
+	return (r);
 }
