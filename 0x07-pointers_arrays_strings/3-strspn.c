@@ -1,45 +1,25 @@
 #include "main.h"
-int checkForChar(char c, char *accept);
 /**
- * int _strspn - string to chech if the character exist
+ * _strspn - gets the length of a prefix substring
+ * @s: string
+ * @accept: contains bytes that may or may not compose parts of the string
  *
- * @s:string
- * @accept:word
- * Return:value
+ * Return: the number of bytes that compose the length
  */
 unsigned int _strspn(char *s, char *accept)
 {
-        unsigned int i, length = 0;
-
-        for (i = 0; s[i] != '\0'; i++)
-        {
-                if (checkForChar(s[i], accept))
-                {
-                        length++;
-                }
-                else
-                        break;
-        }
-        return (length);
-}
-/**
- * checkForChar-cheching if letter is in the string accept
- * @c:character to check
- * @accept:word to check
- * Return:value
- */
-int checkForChar(char c, char *accept)
-{
 	int i;
-	
-	for (i = 0; accept[i] != '\0'; i++)
+	int j;
+	unsigned int length = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (c == accept[i])
-		{
-			return (1);
-		}
+		for (j = 0; accept[j] != '\0' && accept[j] != s[i]; j++)
+			;
+		if (s[i] == accept[j])
+			length++;
+		if (accept[j] == '\0')
+			return (length);
 	}
-	if (c == accept[i])
-		return (1);
-			return (0);
+	return (length);
 }
