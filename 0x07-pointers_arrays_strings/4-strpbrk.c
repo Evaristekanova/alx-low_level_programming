@@ -1,12 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strpbrk-function that searches a string for any of a set of bytes
+ * _strpbrk - function that searches a string for any of a set of bytes
  *
  * @s:string to check
  * @accept:word to check
  *
- * Retrn:value
+ * Return:value
  */
 char *_strpbrk(char *s, char *accept)
 {
@@ -18,7 +18,7 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (accept[j] == s[i])
 			{
-				return (&s[i]);
+				return (s + i);
 			}
 		}
 	}
