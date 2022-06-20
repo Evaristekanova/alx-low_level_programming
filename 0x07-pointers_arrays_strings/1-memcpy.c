@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _memset - filling array with constant bytes
+ * _memcpy - filling array with constant bytes
  *
  * @dest:array1
  * @n:arg2
