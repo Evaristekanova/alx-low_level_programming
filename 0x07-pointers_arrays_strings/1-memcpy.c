@@ -2,9 +2,9 @@
 /**
  * _memset - filling array with constant bytes
  *
- * @b:arg1
+ * @dest:array1
  * @n:arg2
- * @s:array
+ * @src:array2
  * Return:value
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
