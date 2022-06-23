@@ -14,9 +14,12 @@ int checkingPrime(int num, int i)
 {
 	if (num <= 1)
 		return (0);
-	if (num % i != 0)
-		return (checkingPrime(num, i + 1));
-	return (0);
+	if (num > i)
+	{
+		if (num % i != 0)
+			return (checkingPrime(num, i + 1));
+		return (0);
+	}
 	if (num % i == 0)
 		return (1);
 }
