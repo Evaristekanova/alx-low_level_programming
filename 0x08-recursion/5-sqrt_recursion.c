@@ -28,5 +28,5 @@ int _sqrt_recursion(int n)
 {
 	int val = 1;
 
-	squareRoot(n, val);
+	return (squareRoot(n, val));
 }
