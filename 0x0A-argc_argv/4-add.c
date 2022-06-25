@@ -1,29 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
- * main - writes the character c to stdout
- * @argc: number of arguments
- * @argv: array of arguments
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * main - adds positive numbers.
+ * @argc: number of command line arguments.
+ * @argv: array that contains the program command line arguments.
+ * Return: 0 - success.
  */
-
 int main(int argc, char *argv[])
 {
-	int i, num, res = 0;
+	int i, j, add = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		num = atoi(argv[i]);
-		if (!num)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		res += num;
+		add += atoi(argv[i]);
 	}
-	printf("%d\n", res);
+	printf("%d\n", add);
 	return (0);
 }
