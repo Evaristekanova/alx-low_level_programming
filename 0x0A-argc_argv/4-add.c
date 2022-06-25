@@ -1,33 +1,29 @@
 #include <stdio.h>
-#include <ctype.h>
 #include <stdlib.h>
-/**
- * main - display the name of program
- * @argc: argument counter
- * @argv:array of string
- * Return:0 if success
- */
-int main(int argc, char **argv)
-{
-	int i, sum = 0;
 
-	if (argc < 2)
+/**
+ * main - writes the character c to stdout
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+
+int main(int argc, char *argv[])
+{
+	int i, num, res = 0;
+
+	for (i = 1; i < argc; i++)
 	{
-		printf("%d\n", 0);
-	}
-	else
-	{
-		for (i = 1; i< argc; i++)
+		num = atoi(argv[i]);
+		if (!num)
 		{
-			if (isdigit(argv[i]))
-				sum += atoi(argv[i]);
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
+			printf("Error\n");
+			return (1);
 		}
+		res += num;
 	}
-	printf("%d\n", sum);
+	printf("%d\n", res);
 	return (0);
 }
