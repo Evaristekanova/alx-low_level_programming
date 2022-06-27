@@ -5,13 +5,13 @@
  * create_array - creating array of a string and initialize it
  *
  * @size:size of array
- * @c:single character to the areray
+ * @c:single chairacter to the areray
  *
  * Return:value
  */
 char *create_array(unsigned int size, char c)
 {
-	int i = 0;
+	unsigned int i = 0;
 	char *array;
 
 	if (size == 0)
