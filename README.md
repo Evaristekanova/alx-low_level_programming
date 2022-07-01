@@ -1,1 +1,1 @@
-c programming language
+argc and argv[]
